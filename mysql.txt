@@ -1,0 +1,51 @@
+
+						MySQL Database
+
+DataBase:
+	
+	* show databases; 			==> For Show Databases
+	* CREATE DATABASE my_database; 	==> For Create database
+	* USE my_database;  		 ==> use here database name
+
+Table:
+	* CREATE TABLE table1(
+		id int PRIMARY KEY,
+		name VARCHAR(30),
+		age INT,
+		email VARCHAR(50),
+		user_password VARCHAR(8)
+		); 			==> create table
+	* DESCRIBE table1;   		==> show table
+	* DROP TABLE table1;  		==> delete the table
+	* ALTER TABLE table1 ADD confirm_password varchar(8) ;  ==> add new column
+	* ALTER TABLE table1 DROP age;	==> delete specific column
+
+	
+	*  INSERT INTO table1 VALUES(1,"sakthi",22,"sakthimsd531gamil.com","asddsdfd");  ==> insert table one row
+
+	* SELECT * FROM my_database.table1;  				         ==> get all data from table1
+	* SELECT id,name FROM my_database.table1;   				         ==> only get show all data from table1 these two columns
+
+
+Alter Modify After:
+
+	* ALTER TABLE table1 MODIFY COLUMN age INT AFTER name;   		==> name after age change that column
+	* ALTER TABLE table1 CHANGE COLUMN age school VARCHAR(50);  	==>  change column instead of school
+
+Get specific Row:
+	* SELECT * FROM table1 WHERE id = 1;				==> get specific row get  using id
+	
+
+where clause with condition:
+
+	* SELECT * FROM table1 WHERE salary > 15000 AND name = 'sakthi';	==> two condition using filter
+	* SELECT * FROM table1 WHERE email LIKE 'S%';       			==> 's' starting email names return
+	* SELECT * FROM table1 WHERE email NOT LIKE 'S%';       		==> 's' without starting email names return
+
+Update:
+	* SELECT * FROM table1 WHERE id = 1;				==> get that row
+	* UPDATE table1 SET name = 'vijay' , age=23 where id = 1;			==> update specific row items
+
+Delete :
+	* DELETE FROM table1 WHERE id = 1;					==> delete the specific row
+
